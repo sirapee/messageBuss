@@ -26,6 +26,6 @@ class TopicController extends Controller
 
     public function publish(Request $request,$topic){
         $this->topic->publish($request, $topic);
-        return response()->json();
+        return response()->json(['message' => "Published Successfully"]);
     }
 }
